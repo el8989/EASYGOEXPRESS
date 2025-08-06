@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  width: 100px;
+  display: block;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #003366;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff6600;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.login-btn {
+  background-color: transparent;
+  color: #003366;
+  padding: 8px 20px;
+  border: 2px solid #003366;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #003366;
+  color: #fff;
+}
+
+.signup-btn {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #e65500;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .nav-buttons {
+    margin-top: 10px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* CTA Button
+.cta-button {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.cta-button a {
+    background: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.cta-button a:hover {
+    background: #e65c00;
+} */
+.blog-page {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.blog-page h2 {
+    font-size: 32px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.blog-page p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.blog-page ul {
+    padding-left: 20px;
+}
+
+.blog-page ul li {
+    margin-bottom: 15px;
+}
+
+.blog-page ul li a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.blog-page ul li a:hover {
+    color: #ff6600;
+}
+.iconstyle{
+    margin: 0 5px;
+    font-size: 40px;
+}
+footer {
+    background: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}

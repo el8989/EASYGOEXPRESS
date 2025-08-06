@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Freight | EasyGoExpress</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your main CSS file -->
+
+    <style>
+        /* ========== General Styles ========== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4faff;
+  color: #222;
+}
+/* Header Styling */
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Flex Container */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo img {
+  width: 100px;
+  display: block;
+}
+
+/* Nav Links */
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #003366; /* Dark Blue matching logo */
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff6600; /* Accent Orange */
+}
+
+/* Buttons Container */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Login Button */
+.login-btn {
+  background-color: transparent;
+  color: #003366;
+  padding: 8px 20px;
+  border: 2px solid #003366;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #003366;
+  color: #fff;
+}
+
+/* Sign Up Button */
+.signup-btn {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #e65500;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .nav-buttons {
+    margin-top: 10px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}
+ 
+/* Clearfix */
+header::after {
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+
+/* ========== Page Header ========== */
+.page-header {
+  background-color: #d0f0fd;
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 4px solid #0288d1;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  color: #01579b;
+}
+
+.page-header p {
+  font-size: 18px;
+  color: #444;
+}
+
+/* ========== Service Details ========== */
+.service-details {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.service-details h2 {
+  color: #01579b;
+  margin-top: 30px;
+}
+
+.service-details ul {
+  list-style-type: circle;
+  margin-left: 20px;
+  color: #333;
+}
+
+/* ========== Footer ========== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #01579b;
+  color: #ffffff;
+  margin-top: 40px;
+}
+    </style>
+</head>
+<body>
+
+   <header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="mflogo.jpg" alt="EasyGoExpress Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="easygoexpress.html">Home</a></li>
+        <li><a href="easygoaboutus.html">About Us</a></li>
+        <li><a href="easygoservices.html">Services</a></li>
+        <li><a href="easygoblog.html">Blog</a></li>
+        <li><a href="easygocontacts.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-buttons">
+      <a href="easygologsign.html" class="login-btn">Login</a>
+      <a href="easygologsign.html" class="signup-btn">Sign Up</a>
+    </div>
+  </div>
+</header>
+
+    <main class="content">
+        <section class="page-header">
+            <h1>Sea Freight Services</h1>
+            <p>Secure, cost-effective shipping across the globe.</p>
+        </section>
+
+        <section class="service-details">
+            <h2>What We Offer</h2>
+            <ul>
+                <li>FCL and LCL shipping options</li>
+                <li>Port-to-port and door-to-door services</li>
+                <li>Customs clearance assistance</li>
+                <li>Global coverage with trusted partners</li>
+            </ul>
+
+            <h2>Why Choose Our Sea Freight?</h2>
+            <p>EasyGoExpress ensures that your cargo is handled with the highest care. Our sea freight solutions are perfect for bulk goods, international shipments, and businesses that prioritize cost-effective logistics with long-term planning.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EasyGoExpress. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
