@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Land Freight | EasyGoExpress</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css"> <!-- Link your main CSS file -->
-    <style>
-        /* ========== General Styles ========== */
-     /* Header Styling */
-header {
+  <meta charset="UTF-8">
+  <title>shipping Conditions - EasyGoExpress</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css"> <!-- Your global stylesheet -->
+  <style>
+    header {
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
   padding: 15px 30px;
@@ -112,70 +109,52 @@ nav a:hover {
     text-align: center;
   }
 }
- 
-/* Clearfix */
-header::after {
-    content: "";
-    display: block;
-    clear: both;
-} */
-   
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-  color: #222;
-}
 
-/* ========== Page Header ========== */
-.page-header {
-  background-color: #e3f2fd;
-  padding: 60px 20px;
-  text-align: center;
-  border-bottom: 4px solid #2196f3;
-}
+   main.page-content {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
 
-.page-header h1 {
-  font-size: 36px;
-  color: #0d47a1;
-}
+    .conditions-section {
+      background-color: #fefefe;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.04);
+    }
 
-.page-header p {
-  font-size: 18px;
-  color: #444;
-}
+    .conditions-section h2 {
+      font-size: 2rem;
+      color: #003366;
+      margin-bottom: 25px;
+    }
 
-/* ========== Service Details ========== */
-.service-details {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
+    .conditions-section p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
 
-.service-details h2 {
-  color: #0d47a1;
-  margin-top: 30px;
-}
+    .conditions-section ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
 
-.service-details ul {
-  list-style-type: square;
-  margin-left: 20px;
-  color: #333;
-}
+    .conditions-section li {
+      margin-bottom: 12px;
+    }
 
-/* ========== Footer ========== */
-/* footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #0d47a1;
-  color: #ffffff;
-  margin-top: 40px;
-} */
- footer {
+    @media (max-width: 600px) {
+      .conditions-section {
+        padding: 20px;
+      }
+    }
+
+/* Footer */
+footer {
   background: #222;
   color: #ddd;
   padding: 40px 20px 20px 20px;
@@ -234,7 +213,6 @@ body {
 .signup-link-btn:hover {
   background-color: #d62839;
 }
-
 .social-icons {
   margin-top: 15px;
 }
@@ -259,12 +237,12 @@ body {
   font-size: 14px;
 }
 
-    </style>
+  </style>
 </head>
 <body>
-
-   <header>
-  <div class="header-container">
+  <header>
+    <!-- Your nav/header code here -->
+     <div class="header-container">
     <div class="logo">
       <img src="mflogo.jpg" alt="EasyGoExpress Logo" />
     </div>
@@ -282,30 +260,32 @@ body {
       <a href="easygologsign.html" class="signup-btn">Sign Up</a>
     </div>
   </div>
-</header>
+  </header>
 
-    <main class="content">
-        <section class="page-header">
-            <h1>Land Freight Services</h1>
-            <p>Efficient and dependable transportation via road networks.</p>
-        </section>
+    <main class="page-content">
+    <section class="conditions-section">
+      <h2>Shipping Terms & Conditions</h2>
 
-        <section class="service-details">
-            <h2>What We Offer</h2>
-            <ul>
-                <li>Nationwide and regional delivery</li>
-                <li>Tracking and real-time updates</li>
-                <li>Dedicated fleet and professional drivers</li>
-                <li>Custom solutions for businesses</li>
-            </ul>
+      <p>At EasyGoExpress, we strive to make your shipping process as smooth and reliable as possible. Below are our key terms and conditions regarding logistics and delivery:</p>
 
-            <h2>Why Choose Our Land Freight?</h2>
-            <p>With our extensive network and commitment to speed and safety, EasyGoExpress ensures timely deliveries with minimal delays and maximum security. Perfect for businesses requiring rapid movement of goods across short to medium distances.</p>
-        </section>
-    </main>
+      <ul>
+        <li><strong>Shipping Time:</strong> Delivery timelines vary based on destination and method chosen. Estimated delivery times will be provided at checkout.</li>
+        <li><strong>Package Handling:</strong> All packages are handled with care. EasyGoExpress is not responsible for damages caused by improper packaging from the sender.</li>
+        <li><strong>Prohibited Items:</strong> Items such as weapons, illegal substances, and perishable goods are not allowed.</li>
+        <li><strong>Liability:</strong> EasyGoExpress assumes limited liability for lost or damaged goods, depending on the declared value and shipping insurance selected.</li>
+        <li><strong>Customs & Duties:</strong> The customer is responsible for any applicable customs charges in the destination country.</li>
+        <li><strong>Cancellation:</strong> Shipments can only be cancelled before dispatch. Fees may apply depending on the stage of processing.</li>
+      </ul>
 
-    <footer>
-       <div class="footer-container">
+      <p>If you have questions or need further clarification, feel free to <a href="easygocontacts.html" style="color:#007bff;">contact our support team</a>.</p>
+    </section>
+  </main>
+
+
+  <!-- Include your footer here -->
+  <footer>
+    <!-- paste the updated footer here -->
+     <div class="footer-container">
     <div class="footer-column">
       <h4>Shipping Service</h4>
       <ul>
@@ -332,7 +312,6 @@ body {
   <div class="footer-bottom">
     <p>&copy; 2025 EasyGoExpress. All rights reserved. Website by El Patron De Por Vida</p>
   </div>
-    </footer>
-
+  </footer>
 </body>
 </html>

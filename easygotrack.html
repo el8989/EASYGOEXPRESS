@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Land Freight | EasyGoExpress</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css"> <!-- Link your main CSS file -->
-    <style>
-        /* ========== General Styles ========== */
-     /* Header Styling */
-header {
+  <meta charset="UTF-8">
+  <title>track - EasyGoExpress</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css"> <!-- Your global stylesheet -->
+  <style>
+     header {
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
   padding: 15px 30px;
@@ -112,70 +109,68 @@ nav a:hover {
     text-align: center;
   }
 }
- 
-/* Clearfix */
-header::after {
-    content: "";
-    display: block;
-    clear: both;
-} */
-   
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-  color: #222;
-}
 
-/* ========== Page Header ========== */
-.page-header {
-  background-color: #e3f2fd;
-  padding: 60px 20px;
-  text-align: center;
-  border-bottom: 4px solid #2196f3;
-}
+main.page-content {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
 
-.page-header h1 {
-  font-size: 36px;
-  color: #0d47a1;
-}
+    .track-section {
+      background: #f9f9f9;
+      padding: 50px 30px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
 
-.page-header p {
-  font-size: 18px;
-  color: #444;
-}
+    .track-section h3 {
+      font-size: 2rem;
+      color: #003366;
+      margin-bottom: 25px;
+    }
 
-/* ========== Service Details ========== */
-.service-details {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
+    .track-form {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
 
-.service-details h2 {
-  color: #0d47a1;
-  margin-top: 30px;
-}
+    .track-form input[type="text"] {
+      padding: 12px 18px;
+      width: 300px;
+      max-width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
 
-.service-details ul {
-  list-style-type: square;
-  margin-left: 20px;
-  color: #333;
-}
+    .track-form button {
+      padding: 12px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
 
-/* ========== Footer ========== */
-/* footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #0d47a1;
-  color: #ffffff;
-  margin-top: 40px;
-} */
- footer {
+    .track-form button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .track-form {
+        flex-direction: column;
+      }
+    }
+
+/* Footer */
+footer {
   background: #222;
   color: #ddd;
   padding: 40px 20px 20px 20px;
@@ -258,13 +253,12 @@ body {
   padding-top: 15px;
   font-size: 14px;
 }
-
-    </style>
+  </style>
 </head>
 <body>
-
-   <header>
-  <div class="header-container">
+  <header>
+    <!-- Your nav/header code here -->
+     <div class="header-container">
     <div class="logo">
       <img src="mflogo.jpg" alt="EasyGoExpress Logo" />
     </div>
@@ -282,38 +276,30 @@ body {
       <a href="easygologsign.html" class="signup-btn">Sign Up</a>
     </div>
   </div>
-</header>
+  </header>
 
-    <main class="content">
-        <section class="page-header">
-            <h1>Land Freight Services</h1>
-            <p>Efficient and dependable transportation via road networks.</p>
-        </section>
+  <main class="page-content">
+    <section class="track-section">
+      <h3>Track and Trace</h3>
+      <form action="#" class="track-form">
+        <input type="text" placeholder="Enter Tracking ID" required />
+        <button type="submit">Track</button>
+      </form>
+    </section>
+  </main>
 
-        <section class="service-details">
-            <h2>What We Offer</h2>
-            <ul>
-                <li>Nationwide and regional delivery</li>
-                <li>Tracking and real-time updates</li>
-                <li>Dedicated fleet and professional drivers</li>
-                <li>Custom solutions for businesses</li>
-            </ul>
-
-            <h2>Why Choose Our Land Freight?</h2>
-            <p>With our extensive network and commitment to speed and safety, EasyGoExpress ensures timely deliveries with minimal delays and maximum security. Perfect for businesses requiring rapid movement of goods across short to medium distances.</p>
-        </section>
-    </main>
-
-    <footer>
-       <div class="footer-container">
+  <!-- Include your footer here -->
+  <footer>
+    <!-- paste the updated footer here -->
+     <div class="footer-container">
     <div class="footer-column">
       <h4>Shipping Service</h4>
       <ul>
-        <li><a href="easygoconditions.html">Conditions</a></li>
-        <li><a href="easygorates.html">Rates and Services</a></li>
-        <li><a href="easygotrack.html">Track Your Shipment</a></li>
-        <li><a href="easygodelivery.html">Delivery Methods</a></li>
-        <li><a href="easygopayment.html">Payment Methods</a></li>
+        <li><a href="#">Conditions</a></li>
+        <li><a href="#">Rates and Services</a></li>
+        <li><a href="#">Track Your Shipment</a></li>
+        <li><a href="#">Delivery Methods</a></li>
+        <li><a href="#">Payment Methods</a></li>
       </ul>
     </div>
     <div class="footer-column">
@@ -332,7 +318,6 @@ body {
   <div class="footer-bottom">
     <p>&copy; 2025 EasyGoExpress. All rights reserved. Website by El Patron De Por Vida</p>
   </div>
-    </footer>
-
+  </footer>
 </body>
 </html>
