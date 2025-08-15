@@ -26,7 +26,88 @@ body {
 }
 
 /* Header Styling */
-header {
+/* Sticky header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/* Header layout */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Logo */
+.header-container .logo img {
+  height: 40px;
+}
+
+/* Nav menu desktop */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu ul li {
+  margin-left: 20px;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Mobile menu icon */
+.mobile-menu-icon {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Mobile view styles */
+@media (max-width: 760px) {
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-top: 1px solid #eee;
+  }
+
+  .nav-menu.active {
+    display: block;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-menu ul li {
+    margin: 15px 0;
+  }
+}
+
+
+
+
+
+/* header {
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
   padding: 15px 30px;
@@ -36,7 +117,7 @@ header {
 }
 
 /* Flex Container */
-.header-container {
+/* .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,38 +125,38 @@ header {
 }
 
 /* Logo */
-.logo img {
+/* .logo img {
   width: 100px;
   display: block;
-}
+} */
 
 /* Nav Links */
-nav ul {
+/* nav ul {
   display: flex;
   gap: 25px;
   list-style: none;
-}
+} */
 
-nav a {
+/* nav a {
   text-decoration: none;
   color: #003366; /* Dark Blue matching logo */
-  font-weight: 600;
+  /* font-weight: 600;
   font-size: 16px;
   transition: color 0.3s ease;
-}
+} */ */
 
-nav a:hover {
+/* nav a:hover {
   color: #ff6600; /* Accent Orange */
-}
+/* }  */
 
 /* Buttons Container */
-.nav-buttons {
+/* .nav-buttons {
   display: flex;
   gap: 15px;
-}
+} */
 
 /* Login Button */
-.login-btn {
+/* .login-btn {
   background-color: transparent;
   color: #003366;
   padding: 8px 20px;
@@ -90,10 +171,10 @@ nav a:hover {
 .login-btn:hover {
   background-color: #003366;
   color: #fff;
-}
+} */
 
 /* Sign Up Button */
-.signup-btn {
+/* .signup-btn {
   background-color: #ff6600;
   color: #fff;
   padding: 8px 20px;
@@ -102,14 +183,14 @@ nav a:hover {
   font-weight: 600;
   text-decoration: none;
   transition: background-color 0.3s ease;
-}
+} */
 
-.signup-btn:hover {
+/* .signup-btn:hover {
   background-color: #e65500;
-}
+} */
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
     align-items: flex-start;
@@ -128,14 +209,14 @@ nav a:hover {
     width: 100%;
     text-align: center;
   }
-}
+}  */
  
 /* Clearfix */
-header::after {
+/* header::after {
     content: "";
     display: block;
     clear: both;
-} */
+} */ */ */
 
 /* Hero Section */
 /* Hero Section */
