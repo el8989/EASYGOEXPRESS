@@ -333,6 +333,172 @@ footer {
   padding-top: 15px;
   font-size: 14px;
 }
+
+/* ---------- Tablet (max 1000px) ---------- */
+@media (max-width: 1000px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav-buttons {
+    margin-top: 10px;
+    align-self: flex-start;
+  }
+
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+
+  .about-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin: 20px 0;
+  }
+}
+
+/* Hide hamburger icon by default (desktop/tablet view) */
+.mobile-menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+/* ---------- Mobile (max 760px) ---------- */
+@media (max-width: 760px) {
+  /* Header */
+  .header-container {
+    position: relative;
+  }
+
+  .nav-menu nav ul {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 15px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .nav-menu.active nav ul {
+    display: flex;
+  }
+
+  .nav-menu nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    font-size: 24px;
+    color: #003366;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .nav-buttons {
+    display: none;
+  }
+
+  .hero .container {
+    padding: 20px;
+  }
+
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .track-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .track-form input,
+  .track-form button {
+    width: 100%;
+  }
+
+  .about-content h2 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .service-card {
+    width: 100%;
+    margin: 15px auto;
+  }
+
+  .footer-container {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 760px) {
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    padding: 10px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+  }
+
+  .nav-buttons {
+    display: none; /* hide login/signup on mobile if you want */
+  }
+}
+
+
   </style>
 </head>
 <body>
@@ -374,11 +540,11 @@ footer {
     <div class="footer-column">
       <h4>Shipping Service</h4>
       <ul>
-        <li><a href="#">Conditions</a></li>
+        <li><a href="easygoconditions.html">Conditions</a></li>
         <!-- <li><a href="#">Rates and Services</a></li> -->
-        <li><a href="#">Track Your Shipment</a></li>
-        <li><a href="#">Delivery Methods</a></li>
-        <li><a href="#">Payment Methods</a></li>
+        <li><a href="easygotrack.html">Track Your Shipment</a></li>
+        <li><a href="easygodelivery.html">Delivery Methods</a></li>
+        <li><a href="easygopayment.html">Payment Methods</a></li>
       </ul>
     </div>
     <div class="footer-column">
@@ -398,5 +564,13 @@ footer {
     <p>&copy; 2025 EasyGoExpress. All rights reserved. Website by El Patron De Por Vida</p>
   </div>
   </footer>
+     <script>
+          const menuIcon = document.querySelector('.mobile-menu-icon');
+          const navMenu = document.querySelector('.nav-menu');
+
+          menuIcon.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+          });
+       </script>
 </body>
 </html>

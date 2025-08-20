@@ -14,9 +14,9 @@
     <a href="" class="logo">
       <img src="mflogo.jpg" alt="EasyGoExpress Logo">
     </a>
-    <!-- <div class="mobile-menu-icon">
+    <div class="mobile-menu-icon">
       <i class="fas fa-bars"></i>
-    </div> -->
+    </div>
     <nav class="nav-menu">
       <ul>
         <li><a href="easygoexpress.html">Home</a></li>
@@ -72,5 +72,13 @@
   </div>
     </footer><!-- Header / Navigation -->
     <script src="all.js"></script>
+       <script>
+            const menuIcon = document.querySelector('.mobile-menu-icon');
+            const navMenu = document.querySelector('.nav-menu');
+
+            menuIcon.addEventListener('click', () => {
+              navMenu.classList.toggle('active');
+            });
+         </script>
 </body>
 </html>

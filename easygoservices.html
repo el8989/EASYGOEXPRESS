@@ -67,10 +67,19 @@
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
+    <div class="footer-bottom">
     <p>&copy; 2025 EasyGoExpress. All rights reserved. Website by El Patron De Por Vida</p>
-  </div>
-    </footer><!-- Header / Navigation --> 
-    <script src="all.js"></script>
+    </div>
+     </footer>
+          <!-- Header / Navigation --> 
+          <script>
+        const menuIcon = document.querySelector('.mobile-menu-icon');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuIcon.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+        });
+      </script>
+          <script src="all.js"></script>
 </body>
 </html>

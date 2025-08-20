@@ -103,123 +103,9 @@ body {
   }
 }
 
-
-
-
-
-/* header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
-  padding: 15px 30px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-/* Flex Container */
-/* .header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-/* Logo */
-/* .logo img {
-  width: 100px;
-  display: block;
-} */
-
-/* Nav Links */
-/* nav ul {
-  display: flex;
-  gap: 25px;
-  list-style: none;
-} */
-
-/* nav a {
-  text-decoration: none;
-  color: #003366; /* Dark Blue matching logo */
-  /* font-weight: 600;
-  font-size: 16px;
-  transition: color 0.3s ease;
-} */ */
-
-/* nav a:hover {
-  color: #ff6600; /* Accent Orange */
-/* }  */
-
-/* Buttons Container */
-/* .nav-buttons {
-  display: flex;
-  gap: 15px;
-} */
-
-/* Login Button */
-/* .login-btn {
-  background-color: transparent;
-  color: #003366;
-  padding: 8px 20px;
-  border: 2px solid #003366;
-  border-radius: 5px;
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.login-btn:hover {
-  background-color: #003366;
-  color: #fff;
-} */
-
-/* Sign Up Button */
-/* .signup-btn {
-  background-color: #ff6600;
-  color: #fff;
-  padding: 8px 20px;
-  border-radius: 5px;
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-} */
-
-/* .signup-btn:hover {
-  background-color: #e65500;
-} */
-
-/* Responsive Adjustments */
-/* @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  .nav-buttons {
-    margin-top: 10px;
-    flex-direction: column;
-    width: 100%;
-  }
-  .nav-buttons a {
-    width: 100%;
-    text-align: center;
-  }
-}  */
- 
-/* Clearfix */
-/* header::after {
-    content: "";
-    display: block;
-    clear: both;
-} */ */ */
-
 /* Hero Section */
 /* Hero Section */
+
 .hero {
     background: #f4f4f4;
     padding: 60px 0;
@@ -683,3 +569,115 @@ footer {
     display: none; /* hide login/signup on mobile if you want */
   }
 }
+
+
+/* header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Flex Container */
+/* .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+/* .logo img {
+  width: 100px;
+  display: block;
+} */
+
+/* Nav Links */
+/* nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+} */
+
+/* nav a {
+  text-decoration: none;
+  color: #003366; /* Dark Blue matching logo */
+  /* font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+} */ 
+
+/* nav a:hover {
+  color: #ff6600; /* Accent Orange */
+/* }  */
+
+/* Buttons Container */
+/* .nav-buttons {
+  display: flex;
+  gap: 15px;
+} */
+
+/* Login Button */
+/* .login-btn {
+  background-color: transparent;
+  color: #003366;
+  padding: 8px 20px;
+  border: 2px solid #003366;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #003366;
+  color: #fff;
+} */
+
+/* Sign Up Button */
+/* .signup-btn {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+} */
+
+/* .signup-btn:hover {
+  background-color: #e65500;
+} */
+
+/* Responsive Adjustments */
+/* @media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .nav-buttons {
+    margin-top: 10px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}  */
+ 
+/* Clearfix */
+/* header::after {
+    content: "";
+    display: block;
+    clear: both;
+} */
