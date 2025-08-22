@@ -23,12 +23,12 @@ body {
   box-sizing: border-box;
 }
 
-header {
+/* header {
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
   padding: 15px 30px;
   position: sticky;
-  top: 0;
+  top: 0; 
   z-index: 1000;
 }
 
@@ -97,7 +97,86 @@ nav a:hover {
 
 .signup-btn:hover {
   background-color: #e65500;
+} */
+
+/* Sticky header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid #eee;
 }
+
+/* Header layout */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Logo */
+.header-container .logo img {
+  height: 40px;
+}
+
+/* Nav menu desktop */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu ul li {
+  margin-left: 20px;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Mobile menu icon */
+.mobile-menu-icon {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Mobile view styles */
+@media (max-width: 760px) {
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-top: 1px solid #eee;
+  }
+
+  .nav-menu.active {
+    display: block;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-menu ul li {
+    margin: 15px 0;
+  }
+}
+
+
 
 .contact-page {
     padding: 60px 0;
@@ -231,6 +310,8 @@ button[type="submit"]:hover {
   margin-top: 20px;
   padding-top: 15px;
   font-size: 14px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 /* @media (max-width: 768px) {
