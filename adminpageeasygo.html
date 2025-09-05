@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasyGoExpress Admin Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background: #003399;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: #eee;
+      padding: 10px;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 5px 10px;
+    }
+
+    nav button.active {
+      color: #003399;
+      border-bottom: 2px solid #003399;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    form {
+      max-width: 500px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px; 
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .save-btn {
+      background: #003399;
+      color: white;
+    }
+
+    .search-btn {
+      background: #28a745;
+      color: white;
+    }
+
+    .logout-btn {
+      background: #e63946;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #003399;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EasyGoExpress Admin</h1>
+  </header>
+
+  <nav>
+    <button class="tab-link active" data-target="overview">Overview</button>
+    <button class="tab-link" data-target="tracking">Add Tracking</button>
+    <button class="tab-link" data-target="logout">Logout</button>
+  </nav>
+
+  <div class="content">
+    <div id="overview" class="section active">
+      <h2>Overview</h2>
+      <p>Welcome to the EasyGoExpress admin dashboard. Use the menu to manage shipments.</p>
+    </div>
+
+    <div id="tracking" class="section">
+      <h2>Add / Update Tracking</h2>
+      <form id="trackingForm">
+        <label>Tracking Number:</label>
+        <input type="text" id="trackingNumber" required>
+
+        <label>Sender Name:</label>
+        <input type="text" id="senderName" required>
+
+        <label>Receiver Name:</label>
+        <input type="text" id="receiverName" required>
+
+        <label>Current Location:</label>
+        <input type="text" id="location" required>
+
+        <label>Status:</label>
+        <input type="text" id="status" placeholder="In Transit, Delivered..." required>
+
+        <button type="submit" class="save-btn">Save Tracking</button>
+      </form>
+
+      <h3 style="margin-top:30px;">Search / Update Tracking</h3>
+      <form id="searchForm">
+        <label>Enter Tracking Number:</label>
+        <input type="text" id="searchTrackingNumber" required>
+        <button type="submit" class="search-btn">Search</button>
+      </form>
+
+      <div id="searchResult" style="margin-top:20px;"></div>
+    </div>
+
+    <div id="logout" class="section">
+      <h2>Logout</h2>
+      <button class="logout-btn" onclick="logout()">Logout Now</button>
+    </div>
+  </div>
+
+  <footer>
+    © 2024 EasyGoExpress. All rights reserved.
+  </footer>
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Navigation
+  const links = document.querySelectorAll(".tab-link");
+  const sections = document.querySelectorAll(".section");
+
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      links.forEach(l => l.classList.remove("active"));
+      sections.forEach(s => s.classList.remove("active"));
+      link.classList.add("active");
+      document.getElementById(link.dataset.target).classList.add("active");
+    });
+  });
+
+  // Save tracking details
+  const trackingForm = document.getElementById("trackingForm");
+  trackingForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let data = {
+      sender: document.getElementById("senderName").value,
+      receiver: document.getElementById("receiverName").value,
+      location: document.getElementById("location").value,
+      status: document.getElementById("status").value
+    };
+    let trackingNumber = document.getElementById("trackingNumber").value;
+    localStorage.setItem(trackingNumber, JSON.stringify(data));
+    alert("Tracking details saved successfully!");
+    trackingForm.reset();
+  });
+
+  // serch and update tracking
+  const searchForm = document.getElementById("searchForm");
+  const searchResult = document.getElementById("searchResult");
+
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let trackingNumber = document.getElementById("searchTrackingNumber").value;
+    let record = localStorage.getItem(trackingNumber);
+
+    if (record) {
+      let data = JSON.parse(record);
+      searchResult.innerHTML = `
+        <h4>Tracking Details:</h4>
+        <p><b>Sender:</b> ${data.sender}</p>
+        <p><b>Receiver:</b> ${data.receiver}</p>
+        <p><b>Location:</b> ${data.location}</p>
+        <p><b>Status:</b> ${data.status}</p>
+      `;
+    } else {
+      searchResult.innerHTML = <p style="color:red;">No record found for this tracking number.</p>;
+    }
+  });
+
+  // Logout
+  window.logout = function() {
+    alert("You have been logged out.");
+    window.location.href = "admin-login.html";
+  }
+});
+</script>
+
+</body>
+</html>

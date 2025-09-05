@@ -1,0 +1,70 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasyGoExpress Admin</title>
+  <link rel="stylesheet" href="easygoadmin.css">
+</head>
+<body>
+  <div class="admin-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>EasyGoExpress</h2>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Users</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Payments</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <h1>Admin Dashboard</h1>
+      </header>
+
+      <section class="dashboard-cards">
+        <div class="card">Total Orders: 120</div>
+        <div class="card">Active Users: 50</div>
+        <div class="card">Pending Payments: 10</div>
+      </section>
+
+      <section class="data-table">
+        <h2>Recent Orders</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Customer</th>
+              <th>Status</th>
+              <th>Amount</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#001</td>
+              <td>John Doe</td>
+              <td>Delivered</td>
+              <td>$200</td>
+              <td><button>Edit</button> <button>Delete</button></td>
+            </tr>
+            <tr>
+              <td>#002</td>
+              <td>Jane Smith</td>
+              <td>Pending</td>
+              <td>$150</td>
+              <td><button>Edit</button> <button>Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
